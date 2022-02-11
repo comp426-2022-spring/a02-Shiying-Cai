@@ -10,14 +10,17 @@ This script should do the following:
 import { coinFlips, countFlips } from "./modules/coin.mjs";
 
 
-
-let number = 1; 
-const arg = process.argv.slice(2)[0].slice(9);
-if( number != null){
-    number = arg;
-    console.log(countFlips(coinFlips(number)));
-} else{
+try {
+    let number = 1; 
+    const arg = process.argv.slice(2)[0].slice(9);
+    if( number != null){
+        number = arg;
+        console.log(countFlips(coinFlips(number)));
+    }
+} catch (error) {
     console.log(countFlips(coinFlips(1)));
 }
+
+
 
 
