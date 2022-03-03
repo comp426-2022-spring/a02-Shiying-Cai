@@ -6,11 +6,11 @@ This script should do the following:
     The result on STDOUT should be an array of all of the flips in sequence followed by an object summarizing the flips.
 
 */
-
+import minimist from 'minimist';
 import { coinFlips, countFlips } from "./modules/coin.mjs";
 
 
-const arg = process.argv.slice(2)[0].slice(9);
+const arg = minimist(process.argv.slice(2));
 arg['number']
 const num = arg.number || 1; 
 const results = coinFlips(num);
