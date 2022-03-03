@@ -100,14 +100,14 @@ function countFlips(array) {
 
 function flipACoin(call) {
   let f = coinFlip();
-//  let r = "";
+  let r = "";
   if(call == f){
-    return "win";
+    r = "win";
   } else{
-    return "lose";
+    r = "lose";
   }
-//  let callResult = `{ call: '${call}', flip: '${f}', result: '${r}' }`;
-//  return callResult;
+  let callResult = `{ call: '${call}', flip: '${f}', result: '${r}' }`;
+  return callResult;
 }
 
 
